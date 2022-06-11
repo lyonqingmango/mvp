@@ -1,6 +1,6 @@
 import React from 'react';
 import Itemlist from './Itemlist.jsx';
-
+import Table from 'react-bootstrap/Table';
 
 class FormList extends React.Component {
   constructor(props) {

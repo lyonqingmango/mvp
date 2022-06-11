@@ -12,7 +12,7 @@ class Alllists extends React.Component {
   render(){
     return(
       <div>
-      <p>Display all Request</p>
+      <p>Display all Incoming Requests</p>
       <ul>
       {this.props.alllists.map((form, key)=> < FormList form = {form} key ={ form.id} />)}
       </ul>

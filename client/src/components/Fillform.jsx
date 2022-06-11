@@ -9,20 +9,17 @@ class Fillform extends React.Component {
     select2:"Binder",
     item1quantity:1,
     item2quantity:0,
-
+    course:"Math",
+    result:{},
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-
-
   }
 
   handleChange(event) {
     var name = event.target.name;
     console.log('name in fill form handle select change   '+ name )
-
-
     this.setState({[name]:event.target.value});
   }
   handleInputChange(event){
@@ -30,30 +27,38 @@ class Fillform extends React.Component {
     if(event.target.value>=0){
       this.setState({[name]:event.target.value});
     }
-
-
-
   }
 
   handleSubmit(event) {
     event.preventDefault();
     var arr =[];
+    var data ={};
     var item1 ={"itemname": this.state.select1, "quantity": this.state.item1quantity};
     arr.push(item1)
-
-    if(this.state.select2.length>0 && this.state.item2quantity>0){
+    if(this.state.select2.length>0 && this.state.item2quantity > 0){
       var item2 = {"itemname": this.state.select2, "quantity": this.state.item2quantity};
       arr.push(item2);
     }
-
+    data.course=this.state.course;
+    data.items=arr;
     this.setState({items:arr})
-    console.log('submit data in fillform' + this.state.items[0])
+    console.log('data'+ data.items)
+    this.setState({result: data})
+    this.props.handleSubmit(data)
 
   }
 
   render(){
     return(
       <form onSubmit={this.handleSubmit}>
+        <label>
+          Course name
+          <select name="course" value={this.state.course} onChange={this.handleChange}>
+          <option value="Data science">Data Science </option>
+          <option value="Math">Math</option>
+          </select>
+        </label>
+        <br />
         <label>
           Item 1
           <select name="select1" value={this.state.select1} onChange={this.handleChange}>
@@ -81,7 +86,7 @@ class Fillform extends React.Component {
             value={this.state.item2quantity}
             onChange={this.handleInputChange} />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit your request" />
       </form>
 
 
