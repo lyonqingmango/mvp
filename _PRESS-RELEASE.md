@@ -23,21 +23,21 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Sub-Heading ##
   > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
- teachers and administrators will benefit .
+ school administrators will benefit .
 
 ## Summary ##
   > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
-  when teachers request common school supplies, they usaully fill a form and administrators will review the form and stock item.
+  when teachers request common school supplies, they usaully fill a form and administrators will review many teachers' form and then decide how many items they need.
 
 
 ## Problem ##
   > Describe the problem your product solves.
-  In the old way, when teachers request common school supplies, they usually fill a form and administrators need to review the form and go to the storage room to check the availability of  stock items.
+  In the old way, when teachers request common school supplies, they usually fill forms and administrators need to review all the forms and then decide how many items they need.
 
 
 ## Solution ##
   > Describe how your product elegantly solves the problem.
-  For teachers, they can easyily know check if they request are fullfilled. Administrators can easily mangagement the supply orders.
+  Administrators can easily view how many items teachers request and mangagement the supply orders.
 
 ## Quote from You ##
   > A quote from a spokesperson in your company.
@@ -45,7 +45,8 @@ Once the project moves into development, the press release can be used as a touc
 
 ## How to Get Started ##
   > Describe how easy it is to get started.
-  open the page and then available stock shows. Fill the form and then generate a request.
+   Teachers can  select all the opitions to fill the form and then generate a request.
+   Administrators open the page and then can view the how many items they need for all incoming requests.
 
 ## Customer Quote ##
   > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
@@ -53,4 +54,4 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Closing and Call to Action ##
   > Wrap it up and give pointers where the reader should go next.
-close the tag and waiting for  administratorsthe fullfilled request.
+close the window

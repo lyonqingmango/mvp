@@ -4,22 +4,7 @@ import { createRoot } from 'react-dom/client';
 import Fillform from './components/Fillform.jsx';
 import Alllists from './components/Alllists.jsx';
 import $ from "jquery";
-
-
-// var fakedata= [{"_id":"62a6240c1f5098528359fef0","course":"Math","createdAt":"2022-06-12T17:36:01.977Z",
-// "items":[{"itemname":"Marker","quantity":1},{"itemname":"Binder","quantity":2}],"__v":0},
-
-
-// {"_id":"62a624cee57b9576df48f987","course":"Data science","createdAt":"2022-06-12T17:38:58.424Z","items":[{"itemname":"Marker","quantity":1},{"itemname":"Binder","quantity":3}],"__v":0},
-
-
-// {"_id":"62a628db4dc4dd384c5bbff9","course":"Art","createdAt":"2022-06-12T17:56:28.970Z","items":[{"itemname":"Marker","quantity":1},{"itemname":"A4 paper","quantity":4}],"__v":0}]
-
-
-
-
-
-
+import { PieChart } from "react-minimal-pie-chart";
 
 class App extends React.Component {
   constructor(props) {
@@ -98,6 +83,19 @@ class App extends React.Component {
         <ul>Markers: {this.state.markers}</ul>
         <ul>Binders: {this.state.binders}</ul>
         <ul>A4 paper: {this.state.papers}</ul>
+        <PieChart data={[
+          { title: 'Markers', value: this.state.markers, color: '#E38627' },
+          { title: 'Binders', value: this.state.binders, color: '#C13C37' },
+          { title: 'A4 paper', value: this.state.papers, color: '#6A2135' },
+          ]}
+          style={{ height: '200px' }}
+          label={({ dataEntry }) => `${dataEntry.title} ${Math.round(dataEntry.percentage)} % `}
+          lineWidth={10}
+          paddingAngle={5}
+          labelPosition={80}
+          labelStyle= {{fontSize: '8px',fontFamily: 'sans-serif'}}
+
+        />;
         < Alllists alllists = {this.state.alllists} />
       </div>
 
