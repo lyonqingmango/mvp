@@ -11,9 +11,9 @@ app.use(bodyParser.json());
 
 app.post('/post',(req,res)=>{
   console.log("req.body"+ req.body.course)
-  save(req.body,(err,res)=>{
+  save(req.body,(err,result)=>{
     if(err){
-      res.status(500).send('post err')
+      res.status(500).send('err inside post server')
     }else{
       res.status(201).send(result)
     }
@@ -25,7 +25,15 @@ app.post('/post',(req,res)=>{
 
 })
 app.get('/post', (req, res) => {
-  res.send('Hello World!')
+  display((err, data)=>{
+    if(err){
+      res.status(500).send('can not display')
+    }else{
+      res.status(200).send(data)
+    }
+  })
+  // res.send('hello')
+
 })
 
 app.listen(port, () => {

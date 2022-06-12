@@ -54,8 +54,9 @@ class Fillform extends React.Component {
         <label>
           Course name
           <select name="course" value={this.state.course} onChange={this.handleChange}>
-          <option value="Data science">Data Science </option>
-          <option value="Math">Math</option>
+          <option value="Data science">Data Science 2022-2023</option>
+          <option value="Math">Math 2022-2023</option>
+          <option value="Art">Art 2022-2023</option>
           </select>
         </label>
         <br />

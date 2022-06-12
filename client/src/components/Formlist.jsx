@@ -1,7 +1,4 @@
 import React from 'react';
-import Itemlist from './Itemlist.jsx';
-import Table from 'react-bootstrap/Table';
-
 class FormList extends React.Component {
   constructor(props) {
     super(props);
@@ -11,14 +8,26 @@ class FormList extends React.Component {
   render(){
     return(
       <div>
-      <p>Display a Request</p>
-      <p> {this.props.form.course}</p>
-
-      <ul>
-      {this.props.form.items.map((item, key)=> < Itemlist item = {item} key = {key} />)}
-      </ul>
-
-      </div>
+      <p> {this.props.form.course} created at : {this.props.form.createdAt}</p>
+      <table>
+        <thead>
+          <tr>
+          <th> Item</th>
+          <th> Quantity</th>
+          </tr>
+        </thead>
+        {this.props.form.items.map((item, key) => {
+          return (
+            <tbody key={key}>
+              <tr>
+              <td> {item.itemname}</td>
+              <td> {item.quantity}</td>
+              </tr>
+            </tbody>
+          )
+        })}
+      </table>
+    </div>
     )
   }
 }
